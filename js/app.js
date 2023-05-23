@@ -2,7 +2,115 @@
 
 alert('welcome to our website')
 
+const allEmployee= [];
 
+function Employee ( FullName, Department, Level, MyImage, Salary ){
+    // this.EmployeeID = EmployeeID,
+    this.FullName = FullName,
+    this.Department = Department,
+    this.Level = Level,
+    this.MyImage = MyImage,
+    this.Salary =0,
+    this.newSalary=function(){ this.Salary=this.calSalary()
+        
+    }}
+    // allEmployee.push(this) }
+
+
+
+
+let GhaziSamer = new Employee("Ghazi Samer","Administration","Senior");
+let LanaAli = new Employee(X(),"Lana Ali","Finance","Senior");
+let TamaraAyoub = new Employee(X(),"Tamara Ayoub","Marketing");
+let SafiWalid = new Employee(X(),"Safi Walid","Administration","Mid-Senio");
+let OmarZaid = new Employee(X(),"Omar Zaid","Development","Senior");
+let RanaSaleh = new Employee(X(),"Rana Saleh","Development","Junior");
+let HadiAhmad = new Employee(X(),"Hadi Ahmad","Finance","Senior");
+
+console.log(allEmployee);
+
+// prototype 
+Employee.prototype.calSalary =function(){
+    var min=0;
+    var max=0;
+    if (this.Level == 'Mid-Senior') { min = 1000; max = 1500 
+        let salary = Math.floor(Math.random() * (max - min) + min);
+        let NetSalary = salary -(0.075 *salary);
+        return NetSalary}
+    else if (this.Level == 'Senior') { min = 1500; max = 2000
+        let salary = Math.floor(Math.random() * (max - min) + min);
+        let NetSalary = salary -(0.075 *salary);
+        return NetSalary }
+    else { min = 500; max = 1000  
+
+    // min = Math.ceil(min);
+    // max = Math.floor(max);
+    let salary = Math.floor(Math.random() * (max - min) + min);
+    let NetSalary = salary -(0.075 *salary);
+    return NetSalary
+ }}
+
+ Employee.prototype.X =function(){
+    var a = Math.floor(1006 + Math.random() * 1000)
+    a = a.toString().substring(0, 4);
+
+    a = parseInt(a);
+    console.log(a);
+    return (a);
+ }
+ 
+ GhaziSamer.newSalary()
+ LanaAli.newSalary()
+ TamaraAyoub.newSalary()
+ SafiWalid.newSalary()
+ OmarZaid.newSalary()
+ RanaSaleh.newSalary()
+ HadiAhmad.newSalary()
+
+ Employee.prototype.renderEmployee = function(){
+    document.write(`<h1> Employee Name: ${this.FullName}<br>Department: ${this.Department} <br> Employee Salary: ${this.Salary} </h1> `)
+ }
+ GhaziSamer.renderEmployee()
+ LanaAli.renderEmployee()
+ TamaraAyoub.renderEmployee()
+ SafiWalid.renderEmployee()
+ OmarZaid.renderEmployee()
+ RanaSaleh.renderEmployee()
+ HadiAhmad.renderEmployee()
+
+// salary
+// function y()   
+// {
+//     var min;
+//     var max;
+//     if (Employee.Level == 'Mid-Senior') { min = 1000; max = 1500 }
+//     else if (Employee.Level == 'Senior') { min = 1500; max = 2000 }
+//     else { min = 500; max = 1000 }
+
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     let salary = Math.floor(Math.random() * (max - min) + min);
+//     let NetSalary = salary -(0.075 *salary);
+//     return NetSalary
+// } 
+
+
+// EmployeeID
+function X() {// https://stackoverflow.com/questions/29640432/generate-4-digit-random-number-using-substring
+    var a = Math.floor(1006 + Math.random() * 1000)
+    a = a.toString().substring(0, 4);
+
+    a = parseInt(a);
+    console.log(a);
+    return (a);
+}
+
+
+
+
+
+
+/*
 let GhaziSamer = {
     EmployeeID: X(),
     FullName: 'Ghazi Samer',
@@ -154,24 +262,13 @@ console.table(RanaSaleh);
 
 
 
-function X() {// https://stackoverflow.com/questions/29640432/generate-4-digit-random-number-using-substring
-    var a = Math.floor(1006 + Math.random() * 1000)
-    a = a.toString().substring(0, 4);
-
-    a = parseInt(a);
-    console.log(a);
-    return (a);
-}
-
-
-
 let HadiAhmad = {
         /*EmployeeID: function () {
             random = Math.floor(Math.random() * 5);
             console.log(random);
             return random
         }*/
-        EmployeeID: X(),
+      /*  EmployeeID: X(),
         FullName: 'Hadi Ahmad',
         Department: 'Finance',
         Level: 'Senior',
@@ -205,25 +302,25 @@ console.log(HadiAhmad.Salary());
 
 
 console.table(HadiAhmad);
+*/
+// document.getElementById("demo1").innerHTML = `Employee Name: ${GhaziSamer.FullName}<br> Department: ${GhaziSamer.Department}<br>
+// Employee Salary: ${GhaziSamer.y()}`;
 
-document.getElementById("demo1").innerHTML = `Employee Name: ${GhaziSamer.FullName},
-Employee Salary: ${GhaziSamer.Salary()}`;
+// document.getElementById("demo2").innerHTML = `Employee Name: ${LanaAli.FullName}<br>Department: ${LanaAli.Department} <br>
+// Employee Salary: ${LanaAli.y()}`;
 
-document.getElementById("demo2").innerHTML = `Employee Name: ${LanaAli.FullName},
-Employee Salary: ${LanaAli.Salary()}`;
+// document.getElementById("demo3").innerHTML = `Employee Name: ${TamaraAyoub.FullName}<br> Department: ${TamaraAyoub.Department} <br>
+// Employee Salary: ${TamaraAyoub.y()}`;
 
-document.getElementById("demo3").innerHTML = `Employee Name: ${TamaraAyoub.FullName},
-Employee Salary: ${TamaraAyoub.Salary()}`;
+// document.getElementById("demo4").innerHTML = `Employee Name: ${SafiWalid.FullName}<br> Department: ${SafiWalid.Department}<br>
+// Employee Salary: ${SafiWalid.y()}`;
 
-document.getElementById("demo4").innerHTML = `Employee Name: ${SafiWalid.FullName},
-Employee Salary: ${SafiWalid.Salary()}`;
+// document.getElementById("demo5").innerHTML = `Employee Name: ${OmarZaid.FullName}<br> Department: ${OmarZaid.Department}<br>
 
-document.getElementById("demo5").innerHTML = `Employee Name: ${OmarZaid.FullName},
+// Employee Salary: ${OmarZaid.y()}`;
 
-Employee Salary: ${OmarZaid.Salary()}`;
+// document.getElementById("demo6").innerHTML = `Employee Name: ${RanaSaleh.FullName}<br>Department: ${RanaSaleh.Department}<br>
+// Employee Salary: ${RanaSaleh.y()}`;
 
-document.getElementById("demo6").innerHTML = `Employee Name: ${RanaSaleh.FullName},
-Employee Salary: ${RanaSaleh.Salary()}`;
-
-document.getElementById("demo7").innerHTML = `Employee Name: ${HadiAhmad.FullName},
-Employee Salary: ${HadiAhmad.Salary()}`;
+// document.getElementById("demo7").innerHTML = `Employee Name: ${HadiAhmad.FullName}<br>Department: ${HadiAhmad.Department}<br>
+// Employee Salary: ${HadiAhmad.y()}`;
