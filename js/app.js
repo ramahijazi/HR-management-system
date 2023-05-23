@@ -20,12 +20,12 @@ function Employee ( FullName, Department, Level, MyImage, Salary ){
 
 
 let GhaziSamer = new Employee("Ghazi Samer","Administration","Senior");
-let LanaAli = new Employee(X(),"Lana Ali","Finance","Senior");
-let TamaraAyoub = new Employee(X(),"Tamara Ayoub","Marketing");
-let SafiWalid = new Employee(X(),"Safi Walid","Administration","Mid-Senio");
-let OmarZaid = new Employee(X(),"Omar Zaid","Development","Senior");
-let RanaSaleh = new Employee(X(),"Rana Saleh","Development","Junior");
-let HadiAhmad = new Employee(X(),"Hadi Ahmad","Finance","Senior");
+let LanaAli = new Employee("Lana Ali","Finance","Senior");
+let TamaraAyoub = new Employee("Tamara Ayoub","Marketing");
+let SafiWalid = new Employee("Safi Walid","Administration","Mid-Senio");
+let OmarZaid = new Employee("Omar Zaid","Development","Senior");
+let RanaSaleh = new Employee("Rana Saleh","Development","Junior");
+let HadiAhmad = new Employee("Hadi Ahmad","Finance","Senior");
 
 console.log(allEmployee);
 
