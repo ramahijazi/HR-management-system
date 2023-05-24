@@ -33,22 +33,23 @@ console.log(allEmployee);
 Employee.prototype.calSalary =function(){
     var min=0;
     var max=0;
-    if (this.Level == 'Mid-Senior') { min = 1000; max = 1500 
-        let salary = Math.floor(Math.random() * (max - min) + min);
-        let NetSalary = salary -(0.075 *salary);
-        return NetSalary}
-    else if (this.Level == 'Senior') { min = 1500; max = 2000
-        let salary = Math.floor(Math.random() * (max - min) + min);
-        let NetSalary = salary -(0.075 *salary);
-        return NetSalary }
+    if (this.Level == 'Mid-Senior') { min = 1000; max = 1500 }
+        // let salary = Math.floor(Math.random() * (max - min) + min);
+        // let NetSalary = salary -(0.075 *salary);
+        // return NetSalary}
+    else if (this.Level == 'Senior') { min = 1500; max = 2000}
+        // let salary = Math.floor(Math.random() * (max - min) + min);
+        // let NetSalary = salary -(0.075 *salary);
+        // return NetSalary }
     else { min = 500; max = 1000  
 
-    // min = Math.ceil(min);
-    // max = Math.floor(max);
-    let salary = Math.floor(Math.random() * (max - min) + min);
-    let NetSalary = salary -(0.075 *salary);
-    return NetSalary
- }}
+    //min = Math.ceil(min);
+    // max = Math.floor(max); 
+ }
+ 
+ let salary = Math.floor(Math.random() * (max - min) + min);
+ let NetSalary = salary -(0.075 *salary);
+ return NetSalary}
 
  Employee.prototype.X =function(){
     var a = Math.floor(1006 + Math.random() * 1000)
