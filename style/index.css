@@ -1,11 +1,36 @@
-.m{color:black;
-    background-color: blueviolet;
-    font-family:'Roboto', sans-serif; }
+
+ .h{
+
+  color:black;
+  background-color: #FFE5CA;
+  font-family:'Roboto', sans-serif; 
+  justify-content:space-around;
+  gap: 100px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+  
+
+ .h ul{ 
+  list-style: none;
+  justify-content:center; 
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  
+ }
+
+ .h ul li a{
+  text-decoration: none;
+
+ }
+
+.card{color:black;
+    background-color:#FA9884;
+    font-family:'Roboto', sans-serif;
+  
+  }
     
-    img {
-        opacity: 0.5;
-      }
-      
-      img:hover {
-        opacity: 1.0;
-      }
+    
+
